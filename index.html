@@ -1,11 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-inner">
+        <div class="name-plate">
+          <h1>My Tasks</h1>
+          <p class="tagline">Organize Tasks,Events and Priorities</p>
+        </div>
+
+        <section class="status-bar" aria-label="tasks-summary">
+          <div class="status-card">
+            <span class="status-name">Total</span>
+            <span id="total-count" class="status-value">0</span>
+          </div>
+
+          <div class="status-card">
+            <span class="status-name">Active</span>
+            <span id="active-count" class="status-value">0</span>
+          </div>
+
+          <div class="status-card">
+            <span class="status-name">Completed</span>
+            <span id="completed-count" class="status-value">0</span>
+          </div>
+        </section>
+      </div>
+    </header>
+  </body>
+  <script src="./javascript.js"></script>
 </html>
