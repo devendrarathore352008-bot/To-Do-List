@@ -124,6 +124,11 @@ body {
   color: var(--text-color);
 }
 
+.filter-buttons {
+  display: flex;
+  gap: 6px;
+}
+
 .filter-btn{
   flex: 1;
   padding: 8px;
@@ -141,7 +146,7 @@ body {
 }
 
 .sidebar input{
-  width:100px;
+  width:100%;
   padding: 8px 10px;
   font-size: 14px;
   font-family: var(--main-font);
@@ -151,7 +156,7 @@ body {
 }
 
 .sidebar select{
-  width:100px;
+  width:100%;
   padding: 8px 10px;
   font-size: 14px;
   font-family: var(--main-font);
@@ -273,6 +278,11 @@ body {
   color: #64748b;
 }
 
+.todo-date {
+  font-size: 12px;
+  color: #64748b;
+}
+
 .priority-badge {
   font-size: 11px;
   font-weight: bold;
@@ -329,3 +339,112 @@ body {
 
 /*footer section css*/
 
+.program-footer{
+  background: #172554;
+  color: white;
+  padding: 40px 30px 15px;
+  margin-top: 70px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-container{
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+
+
+.footer-section{
+  /* max-width: 1100px; */
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* grid-template-columns: repeat(3, 1fr);
+  gap: 40px; */
+}
+
+.footer-section h2{
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #93c5fd;
+
+}
+
+.footer-section h3{
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #93c5fd;
+}
+
+.footer-section p{
+  font-size: 14px;
+  line-height: 1.7;
+  color: #dbeafe;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  border-top: 1px solid #475569;
+  margin-top: 5px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.footer-bottom p{
+  font-size: 12px;
+  color: #cbd5e1;
+  margin: 5px;
+}
+
+
+/* responsive footer */
+
+@media (max-width: 650px) {
+
+  .footer-container{
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  /* .program-footer{
+    padding: 30px 20px 15px;
+  } */
+}
+
+
+@media (max-width: 800px) {
+  .main-program {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .status-bar {
+    width: 100%;
+  }
+
+  .status-card {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
