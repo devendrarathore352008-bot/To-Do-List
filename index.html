@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header class="main-header">
+    <!-- Header Section -->
+
+    <header class="program-header">
       <div class="header-inner">
         <div class="name-plate">
           <h1>My Tasks</h1>
-          <p class="tagline">Organize Tasks,Events and Priorities</p>
+          <p class="tagline">Organize Tasks, Events and Priorities</p>
         </div>
 
-        <section class="status-bar" aria-label="tasks-summary">
+        <section class="status-bar" aria-label="Tasks summary">
           <div class="status-card">
             <span class="status-name">Total</span>
             <span id="total-count" class="status-value">0</span>
@@ -32,6 +34,140 @@
         </section>
       </div>
     </header>
-  </body>
+
+    <!-- Main Section -->
+
+    <main class="main-program">
+      <!-- Side bar -->
+
+      <aside class="sidebar" aria-label="Filter and menu">
+        <section class="filter-section">
+          <h2>Status</h2>
+          <div
+            class="filter-buttons"
+            role="group"
+            aria-label="Filter by task status"
+          >
+            <button
+              type="button"
+              class="filter-btn is-active"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button type="button" class="filter-btn" data-filter="active">
+              Active
+            </button>
+            <button type="button" class="filter-btn" data-filter="completed">
+              Completed
+            </button>
+          </div>
+        </section>
+
+        <section class="filter-section">
+          <label for="priority-filter">Priority</label>
+          <select id="priority-filter" name="priority-filter">
+            <option value="all">All Priorities</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </section>
+
+        <section class="filter-section">
+          <label for="search-input">Search Tasks</label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search by keyword..."
+          />
+        </section>
+
+        <section class="clear-section">
+          <button type="button" id="clear-completed-btn" class="secondary-btn">
+            Clear Completed
+          </button>
+        </section>
+      </aside>
+
+      <!--Adding tasks section -->
+
+      <section class="task-panel" aria-label="Tasks Management">
+        <form id="todo-form" class="todo-form">
+          <div class="task-field">
+            <label for="task-input">Task</label>
+            <input
+              id="task-input"
+              name="task-input"
+              type="text"
+              placeholder="Add a new task..."
+              required
+            />
+          </div>
+
+          <div class="task-field">
+            <label for="priority-input">Priority</label>
+            <select id="priority-input" name="priority-input">
+              <option value="high" selected>High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+
+          <div class="task-field">
+            <label for="due-date-input">Due Date</label>
+            <input type="date" id="due-date-input" name="due-date-input" />
+          </div>
+
+          <div class="task-action">
+            <button type="submit" class="primary-btn">Add Task</button>
+          </div>
+        </form>
+
+        <section class="task-list-section" aria-label="Task list">
+          <ul id="todo-list" class="todo-list"></ul>
+          <p id="empty-state" class="empty-state">
+            No tasks. Add your first task and start building good habits.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+
+    <footer class="program-footer">
+      <div class="inner-footer">
+        <div class="greet-message">
+          <h2>Thank You!</h2>
+          <p class="extra-message">
+            We created this for our<br />practice and project purposes.<br /><br />Hope
+            you liked it.
+          </p>
+        </div>
+
+        <div class="contact-section">
+          <h2>Contact Us</h2>
+          <p>
+            Use this information just to inform us what we can improve more.
+          </p>
+
+          <p>&phone; Phone: <b>1800-000-1600</b></p>
+          <p>Mail: <b>pvdvd@gmail.com</b></p>
+          <p>
+            Address:
+            <b>67, Sentri Colony Near Santurion Garden, Gwalior (M.P.)</b>
+          </p>
+        </div>
+
+        <hr />
+
+        <p class="copyright">
+          &copy; 2026, All Rights reserved. This is for educational purpose
+          only.
+        </p>
+      </div>
+    </footer>
+
   <script src="./javascript.js"></script>
+  </body>
 </html>
