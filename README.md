@@ -9,7 +9,7 @@ A lightweight, responsive, browser-based To-Do List web application built with *
 ## Live Demo & Repository
 
 - **GitHub Repository:** [devendrarathore352008-bot/To-Do-List](https://github.com/devendrarathore352008-bot/To-Do-List)
-- **Live App (GitHub Pages):** `https://devendrarathore352008-bot.github.io/To-Do-List/` *(enable Pages in Settings -> Pages -> Deploy from `main` branch)*
+- **Live App (GitHub Pages):** `https://devendrarathore352008-bot.github.io/To-Do-List/`
 
 ---
 
@@ -41,12 +41,14 @@ A lightweight, responsive, browser-based To-Do List web application built with *
 
 ## Project Structure
 
-```text
+
 To-Do-List/
 ├── index.html        # Semantic HTML layout (header, filter sidebar, task panel, footer)
 ├── style.css         # Theme variables, Flexbox/Grid styling, and responsive media queries
 ├── javascript.js     # State management, CRUD operations, filtering, and localStorage sync
 └── README.md         # Project documentation
+
+---
 
 
 ## Authors
